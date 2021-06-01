@@ -1,0 +1,22 @@
+@import '../../assets/styles/Vars.scss';
+
+.container-fluid-custom {
+  background-color: $blue;
+  //background-size: 100% 100%;
+
+  .Logo {
+    height: 200px;
+  }
+  .row-center-custom {
+    height: 100vh;
+    .login-form {
+      background: white;
+      border-radius: 10px;
+    }
+  }
+
+  .btn-submit{
+    background-color: $blue;
+    border-color: $blue;
+  }
+}

@@ -1,0 +1,22 @@
+.container-discovery-element {
+  display: contents;
+}
+
+.hover-color-skyblue {
+  transition: 0.3s;
+}
+
+.hover-color-skyblue:hover {
+  background-color: skyblue;
+}
+
+.hover-color-bluer {
+  transition: 0.3s;
+}
+
+.hover-color-bluer:hover {
+  background-color: rgba(6, 103, 168, 0.555);
+}
+.txt-trans{
+  text-transform: capitalize;
+}

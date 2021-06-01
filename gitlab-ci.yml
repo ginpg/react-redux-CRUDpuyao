@@ -1,0 +1,34 @@
+stages:
+  - build
+  - deploy
+
+develop Build:
+  image: node:14.15.4
+  stage: build
+  environment: 
+    name: develop
+  script:
+    - echo "Running develop build" 
+    - rm -rf node_modules 
+    - npm install --save array-unique --force
+    - npm cache verify
+    - echo -e "$ENV" > .env
+    - CI='false' npm run build
+  artifacts:
+    paths:
+      - build/
+  only:
+    - develop
+
+develop Deploy:
+  image: python:latest
+  stage: deploy
+  environment: 
+    name: develop
+  script:
+    - echo "Running develop deployment"
+    - pip install awscli
+    - aws s3 cp ./build s3://$AWS_S3_BUCKET_NAME/ --recursive
+    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  only:
+    - develop

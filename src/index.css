@@ -1,0 +1,94 @@
+body {
+  margin: 0px;
+  padding: 0px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Sidebar change sidebar space */
+#sidebar-wrapper {
+  min-height: 100vh !important;
+  width: 100vw;
+  margin-left: -1rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+
+  padding-left: 15px;
+  padding-right: 0px;
+  font-size: 1.1rem;
+
+  display: flex;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+/* Change content right to the sidebar */
+#page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+  transition: margin-left 0.5s;
+}
+
+/* Overwrite classes */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0rem;
+}
+
+/* Custom classes just to change some looks and not put it inline*/
+.container-no-padding {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.container-no-margin {
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.container-no-margin-left-right {
+  margin-left: 0rem !important;
+  margin-right: 0rem !important;
+}
+
+.container-margin-left-08em {
+  margin-left: 0.8rem;
+}
+
+.spread-both {
+  justify-content: space-between;
+}
+
+.navbar-aesthethic {
+  background-color: #eae9e9 !important;
+}
+
+.display-flex {
+  display: flex;
+}
+
+#config_dropdown .dropdown-menu {
+  margin-left: -5rem !important;
+}
+
+a#logout_button_outer_padding {
+  padding-right: 1rem;
+  padding-left: 1.5rem;
+}
+
+a#logout_button_outer_padding .logout_button_inner_padding {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}

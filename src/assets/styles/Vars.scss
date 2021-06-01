@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+//Paleta de colores
+$colors: 'white' #ffffff, 'gray' #707070, 'black' #00000029, 'main' #1d2d5a, 'dark_blue' #00183b,
+  'light_blue' #1a304f, 'blue' #185F7F;
+
+$white: #ffffff;
+$main: #1d2d5a;
+$gray: #707070;
+$black: #00000029;
+$dark_blue: #00183b;
+$light_blue: #1a304f;
+$blue: #185F7F; 
+
+// Formula para responsive
+@function vw($pixels, $context: 1920) {
+  @return ($pixels / $context) * 100vw;
+}
